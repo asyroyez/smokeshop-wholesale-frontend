@@ -1,0 +1,69 @@
+:root {
+  /* Colors */
+  --clr-primary-200: hsl(110, 73%, 64%);
+  --clr-primary-400: #a463b5;
+
+  --clr-neutral-100: #f7ebdd;
+  --clr-neutral-900: #bbbbbb;
+
+  /* Typography */
+
+  --ff-size: 62.5%;
+  --ln-height: 1.4;
+  --ff-primary: 'Open Sans', sans-serif;
+  --ff-accent: 'Merriweather', serif;
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+br {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+/* Invisible Scrollbar */
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Defaults */
+
+.card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+/* Main */
+body {
+  font-size: var(--ff-size);
+  line-height: var(--ln-height);
+  font-family: var(--ff-primary);
+}
