@@ -4,36 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/main.css" />
-    <title>Welcome | Smokin Pipes Wholesale</title>
+    <link rel="stylesheet" href="/main.css" />
+    <title>Welcome | Smokeshop Wholesale</title>
   </head>
   <body>
     <header>
       <nav>
-        <ul class="flex list rasta-colors">
+        <ul class="flex rasta-colors">
           <li><a href="products.html" class="nav-item">Products</a></li>
           <li>
             <a href="index.html"
               ><img src="assets/logo.png" alt="" class="logo"
             /></a>
           </li>
-          <li><a href="#contact" class="nav-item">Contact</a></li>
+          <li><a href="contact.html" class="nav-item">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="welcome">
-        <div class="flex welcome-container"></div>
-        <h1>Welcome to Smokin Pipes Wholesale</h1>
-        <h2>Here are some of the products we offer:</h2>
-      </section>
-      <section id="contact">
-        <div class="flex contact-container">
-          <h1>Contact Us</h1>
-          <h2>Email: email@ourcompany.com</h2>
+        <div class="flex landing">
+          <div class="welcome-container">
+            <h1>Welcome to Smokeshop Wholesale</h1>
+            <p>Brief Description About the Company</p>
+          </div>
+        </div>
+        <div class="flex welcome-products-container">
+          <h1>Products Currently Available for Purchase</h1>
+          <ul class="flex welcome-products-buttons">
+            <li>
+              <div class="flex welcome-product-card">
+                <img
+                  src="/assets/products/randys-black-label-cleaner-12oz.png"
+                  alt=""
+                />
+                <h1>Cleaners</h1>
+                <p>
+                  Some text about cleaner products: names, minimum sale amount,
+                  etc.
+                </p>
+                <p><button href="/products.html#papers">View More</button></p>
+              </div>
+            </li>
+            <li>
+              <div class="flex welcome-product-card">
+                <img
+                  src="/assets/products/ocb-cones-unbleached-x6.png"
+                  alt=""
+                />
+                <h1>Rolling Papers</h1>
+                <p>
+                  Some text about paper products: names, minimum sale amount,
+                  etc.
+                </p>
+                <p><button href="/products.html#papers">View More</button></p>
+              </div>
+            </li>
+            <!-- <li class="welcome-button"></li> -->
+          </ul>
         </div>
       </section>
     </main>
+    <footer class="flex">
+      <p class="copyright">© SMOKESHOP WHOLESALE LLC 2022</p>
+    </footer>
+
     <!-- <footer>
       CC Note
       <ul class="social-list list">
