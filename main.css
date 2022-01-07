@@ -65,26 +65,24 @@ section > h1 {
 
 .flex {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.col {
-  flex-flow: column nowrap;
+@media only screen and (min-width: 600px) {
+  .flex {
+    flex-flow: row wrap;
+  }
 }
 
-.logo {
-  max-height: 12em;
-  padding: 1em;
-}
+
 
 /* Card Styles */
 
 .card-container {
-  flex: 1 1 25%;
-  gap: 2em;
+  gap: 1em;
 }
 
 .card-border {
@@ -96,8 +94,6 @@ section > h1 {
 }
 
 .card {
-  display: flex;
-  flex-flow: column;
   border-radius: 2em;
   padding: 1.5em;
   gap: 1.5em;
@@ -107,11 +103,7 @@ section > h1 {
   max-width: 95vw;
 }
 
-.card-image {
-  /* flex: 1 1 30%; */
-}
-
-.card-image img {
+.card img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -119,11 +111,9 @@ section > h1 {
 
 .card-description {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   text-align: start;
   gap: 2em;
-  width: 40em;
 }
 
 .card-description h1 {
@@ -158,11 +148,32 @@ section > h1 {
   font-weight: bold;
 }
 
+@media only screen and (min-width: 600px) {
+  .card-container {
+    flex: 1 1 25%;
+  }
+  
+  .card {
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    min-width: 50em;
+    max-width: 20vw;
+    flex: 1 1 50%;
+  }
+  .card-image {
+    flex-flow: row nowrap;
+    flex: 1 1 100%;
+  }
+
+  .card-description {
+    flex-direction: column;
+  }
+}
+
 /* Nav */
 
 nav {
   background-color: var(--clr-neutral-100);
-  padding-bottom: 2em;
 }
 
 nav ul {
@@ -170,8 +181,8 @@ nav ul {
 }
 
 .nav-logo {
-  flex: 1 1 50%;
-  text-align: left;
+  /* flex: 1 1 50%; */
+  /* text-align: left; */
 }
 
 .nav-logo img {
@@ -183,8 +194,10 @@ nav ul {
 
 .nav-menu {
   flex: 1 1 50%;
-  gap: 1em;
+  gap: .5em;
+  padding: 1em;
 }
+
 
 .nav-item {
   display: block;
@@ -199,6 +212,13 @@ nav ul {
 }
 
 .nav-item:active {
+}
+
+
+@media only screen and (min-width: 600px) {
+  .nav-menu {
+    gap: 2em;
+  }
 }
 
 /* Welcome Page */
@@ -267,18 +287,4 @@ p.copyright {
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 
-@media only screen and (min-width: 600px) {
-  .flex {
-    flex-flow: row wrap;
-  }
 
-  .card {
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    flex: 1 1 25%;
-  }
-
-  .nav-menu {
-    gap: 2em;
-  }
-}
