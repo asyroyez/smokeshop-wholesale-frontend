@@ -46,6 +46,7 @@ body {
   font-family: var(--ff-primary);
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
+  height: 100vh;
 }
 
 section {
@@ -60,6 +61,20 @@ section > h1 {
   font-size: 3em;
   padding: 1em;
   color: var(--clr-primary-500);
+}
+
+button {
+  font-size: 2em;
+  border: none;
+  padding: 0.75em;
+  background-color: var(--clr-primary-500);
+  border-radius: 0.4em;
+  transition: transform 0.2s;
+  box-shadow: 0 0.8em 1em 0 hsla(0, 0%, 0%, 0.2);
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 footer {
@@ -136,20 +151,6 @@ p.copyright {
   gap: 1em;
 }
 
-.card-buttons button {
-  font-size: 2em;
-  border: none;
-  padding: 0.75em;
-  background-color: var(--clr-primary-500);
-  border-radius: 0.4em;
-  transition: transform 0.2s;
-  box-shadow: 0 0.8em 1em 0 hsla(0, 0%, 0%, 0.2);
-}
-
-.card-buttons button:hover {
-  transform: scale(1.1);
-}
-
 .card-buttons a {
   color: var(--clr-neutral-900);
   font-weight: bold;
@@ -220,31 +221,27 @@ nav ul {
 
 /* .nav-item:active {} */
 
+.landing {
+  height: 52vh;
+  justify-content: space-evenly;
+}
+
 .welcome-container {
   gap: 1em;
+  padding: 1em;
 }
 
 .welcome-container h1 {
   color: var(--clr-primary-500);
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .welcome-container p {
   color: whitesmoke;
   font-size: 1.6em;
-  padding: 0.5em 1em 1em 1em;
+  padding: 0.5em;
   max-width: 37em;
   text-align: left;
-}
-
-.welcome-container button {
-  font-size: 1.8em;
-  border: none;
-  padding: 0.75em;
-  background-color: var(--clr-primary-500);
-  border-radius: 0.4em;
-  transition: transform 0.2s;
-  box-shadow: 0 0.8em 1em 0 hsla(0, 0%, 0%, 0.2);
 }
 
 @media only screen and (min-width: 600px) {
@@ -256,7 +253,7 @@ nav ul {
     height: 66.5vh;
     width: 100%;
   }
-  
+
   .welcome-container {
     background-color: hsla(120, 67%, 25%, 0.75);
     flex-flow: column nowrap;
@@ -266,5 +263,57 @@ nav ul {
 
   .welcome-container p {
     font-size: 2em;
+  }
+}
+
+/* Contact Form */
+
+.contact-card {
+  padding: 0 1em;
+}
+
+.contact-card p {
+  font-size: 1.7em;
+  text-align: left;
+}
+
+.contact-card ul {
+  align-items: flex-start;
+  padding: 1em 0;
+}
+
+.contact-card li {
+  padding: .75em 0;
+}
+
+.contact-card input {
+  height: 2.2em;
+  width: 20em;
+}
+
+.contact-card textarea {
+  height: 15em;
+  width: 30em;
+}
+
+.contact-card label {
+  font-size: 1.5em;
+}
+
+
+.contact-buttons {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .contact-card {
+    flex-flow: column nowrap;
+    height: 66.5vh;
+    justify-content: flex-start;
+    /* width: 80%; */
+  }
+  
+  .contact-form {
+    flex-flow: column nowrap;
   }
 }

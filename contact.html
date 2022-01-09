@@ -29,9 +29,11 @@
       </nav>
     </header>
     <main>
-      <div class="container">
+      <section class="flex contact-card">
+        <h1>Contact Us</h1>
+        <p>Please have your Resale License and Tobacco License prior to purchasing wholesale products. Thank you!</p>
         <form action="" method="POST">
-          <ul class="flex flex-col">
+          <ul class="flex contact-form">
             <li>
               <label for="name">Name</label>
               <input
@@ -56,48 +58,23 @@
                 placeholder="Enter your phone here"
               />
             </li>
-            <li class="flex">
-              <p>Product</p>
-              <ul class="flex">
-                <li>
-                  <input type="checkbox" id="420-cleaner" />
-                  <label for="420-cleaner">420 Cleaner</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="randys" />
-                  <label for="randys">Randy's</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="raw" />
-                  <label for="raw">Raw</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="ocb" />
-                  <label for="ocb">OCB</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="other" />
-                  <label for="other">Other</label>
-                </li>
-              </ul>
-            </li>
             <li>
-            <li>
-              <label for="message">Message</label>
               <textarea
-                rows="6"
-                id="message"
-                placeholder="Enter your message here"
+              id="message"
+              placeholder="Enter your message here"
               ></textarea>
             </li>
-              <button type="submit">Get Quote</button>
-            </li>
+            <div class="contact-buttons">
+              <button type="submit">Submit</button>
+            </div>   
           </ul>
         </form>
-      </div>
+      </section>
     </main>
     <footer class="flex">
       <p class="copyright">Copyright © SMOKESHOP WHOLESALE LLC 2022</p>
     </footer>
   </body>
-</html>
+  </html>
+  
+  <!-- rows="10" -->
